@@ -1,0 +1,14 @@
+.new-entry-form {
+    margin-top: 20px;
+  }
+  
+  .new-entry-form input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .new-entry-form button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
