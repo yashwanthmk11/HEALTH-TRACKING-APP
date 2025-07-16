@@ -15,7 +15,7 @@ A fully functional MERN (MongoDB, Express, React, Node.js) stack application tha
 
 ## 📸 Screenshot
 
-![Health Tracking App UI]([./Screenshot.png](https://github.com/yashwanthmk11/HEALTH-TRACKING-APP/blob/main/Screenshot%202025-07-16%20234954.png))
+![Health Tracking App UI](Screenshot 2025-07-16 234954.png)
 
 ---
 
