@@ -15,8 +15,7 @@ A fully functional MERN (MongoDB, Express, React, Node.js) stack application tha
 
 ## 📸 Screenshot
 
-![Health Tracking App UI](Screenshot 2025-07-16 234954.png)
-
+> For a visual reference of the app UI, you can check the file named `Screenshot.png` in the project repository.
 ---
 
 ## 🛠 Tech Stack
