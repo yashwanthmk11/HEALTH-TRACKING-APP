@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NewEntryForm from './components/NewEntryForm';
 import HealthMetricsDashboard from './components/HealthMetricsDashboard';
 import HealthRecordDetailModal from './components/HealthRecordDetailModal';
+import Footer from './components/Footer';
 
 function App() {
   const [healthMetrics, setHealthMetrics] = useState([]);
@@ -32,32 +33,38 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 px-4">
-      <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">
-        🩺 Health Tracking App
-      </h1>
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {/* Main Content */}
+      <div className="flex-grow py-6 px-4">
+        <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">
+          🩺 Health Tracking App
+        </h1>
 
-      <div className="flex flex-col lg:flex-row gap-6">
-        {/* Dashboard */}
-        <div className="lg:w-2/3">
-          <HealthMetricsDashboard
-            metrics={healthMetrics}
-            onEdit={editMetric}
-            onDelete={deleteMetric}
-            onView={viewDetails}
-          />
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Dashboard */}
+          <div className="lg:w-2/3">
+            <HealthMetricsDashboard
+              metrics={healthMetrics}
+              onEdit={editMetric}
+              onDelete={deleteMetric}
+              onView={viewDetails}
+            />
+          </div>
+
+          {/* New Entry Form */}
+          <div className="lg:w-1/3">
+            <NewEntryForm addMetric={addMetric} />
+          </div>
         </div>
 
-        {/* New Entry Form */}
-        <div className="lg:w-1/3">
-          <NewEntryForm addMetric={addMetric} />
-        </div>
+        {/* Modal */}
+        {viewRecord && (
+          <HealthRecordDetailModal record={viewRecord} onClose={closeModal} />
+        )}
       </div>
 
-      {/* Modal */}
-      {viewRecord && (
-        <HealthRecordDetailModal record={viewRecord} onClose={closeModal} />
-      )}
+      {/* Footer at Bottom */}
+      <Footer />
     </div>
   );
 }
